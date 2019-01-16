@@ -1,0 +1,15 @@
+.slider {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sliderImg {
+    height: 250px;
+    width: 250px;
+    margin-left: 5px;
+    border: 1px solid black;
+}
+
+#img5, #img6, #img7, #img8  {
+    display: none;
+}

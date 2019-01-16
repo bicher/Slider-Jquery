@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <title>Slider</title>
+</head>
+<body>
+<div class="container">
+    <div class="slider">
+            <button type="button" id="prev">&larr;</button>
+        <img src="images/img_html.jpg" class="sliderImg" id="img1" />
+        <img src="images/img_css.jpg" class="sliderImg" id="img2" />
+        <img src="images/img_bootstrap.png" class="sliderImg" id="img3" />
+        <img src="images/img_js.png" class="sliderImg" id="img4" />
+        <img src="images/img_angular.jpg" class="sliderImg" id="img5" />
+        <img src="images/img_react.jpg" class="sliderImg" id="img6" />
+        <img src="images/node-js_logo.png" class="sliderImg" id="img7" />
+        <img src="images/MongoDB.jpg" class="sliderImg" id="img8" />
+        <button type="button" id="next">&rarr;</button>
+        
+    </div>
+</div>
+<script>
+$(document).ready( () => {
+    var counter = 0;
+    $("#next").on("click", () => {
+        counter++;
+    for(var i=0; i<=3; i++){
+        if(counter == 1){
+            $("#img1").hide();
+            $("#img5").show();
+        }
+        else if (counter == 2){
+            $("#img2").hide();
+            $("#img6").show();
+        } 
+        else if (counter == 3){
+            $("#img3").hide();
+            $("#img7").show();
+        } 
+        else if (counter == 4){
+            $("#img4").hide();
+            $("#img8").show();
+        } 
+        
+       else {
+            $("#img8").hide();
+            $("#img7").hide();
+            $("#img6").hide();
+            $("#img1").show();
+            $("#img5").hide();
+            $("#img2").show();
+            $("#img3").show();
+            $("#img4").show();
+            counter = 0;
+        }
+        }
+    });  
+    $("#prev").on("click", () => {
+        counter--;
+        for(var i=0; i<=3; i++){
+        if(counter == -1){
+            $("#img1").hide();
+            $("#img5").show();
+        }
+        else if (counter == -2){
+            $("#img2").hide();
+            $("#img6").show();
+        } 
+        else if (counter == -3){
+            $("#img3").hide();
+            $("#img7").show();
+        } 
+        else if (counter == -4){
+            $("#img4").hide();
+            $("#img8").show();
+        } 
+        else {
+            $("#img8").hide();
+            $("#img7").hide();
+            $("#img6").hide();
+            $("#img1").show();
+            $("#img5").hide();
+            $("#img2").show();
+            $("#img3").show();
+            $("#img4").show();
+            counter = 0;
+        }
+        };
+    });
+});
+
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+</body>
+</html>
